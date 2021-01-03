@@ -106,7 +106,6 @@ function updateSpitter() {
     var clampedB = valClampRGB[2] > 0 ? pad(Math.round((valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2) : pad(Math.round(val1RGB[2] + (valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2);
     colors[i] = ["#", clampedR, clampedG, clampedB].join("");
     essentialscolorsout[i] = ["&#", clampedR, clampedG, clampedB, nickspaced[i]].join("");
-    othercolorsout[i] = ["&x", clampedR.split("").toString().replace(/,/g, "&"), "&", clampedG.split("").toString().replace(/,/g, "&"), "&", clampedB.split("").toString().replace(/,/g, "&"), nickspaced[i]].join("");
   }
   //build div representation of gradient
   var html = [];
@@ -115,8 +114,7 @@ function updateSpitter() {
   }
   document.getElementById("colors").innerHTML = html.join("");
   //update the pre element
-  fixedjson1 = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "");
-  spitter.innerText = fixedjson1;
+  spitter.innerText = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "");
 
   //bear func
 
