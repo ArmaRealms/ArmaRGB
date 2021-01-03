@@ -116,14 +116,7 @@ function updateSpitter() {
   document.getElementById("colors").innerHTML = html.join("");
   //update the pre element
   fixedjson1 = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "").replace(/ /g, "");
-  peen1 = `/nick ${fixedjson1}`;
-  spitter.innerText = peen1;
-
-  document.getElementById("color1").innerHTML = html.join("");
-  //update the pre element
-  fixedjson2 = JSON.stringify(othercolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "").replace(/ /g, "");
-  peen2 = `/nick ${fixedjson2}`;
-  spitter1.innerText = peen2;
+  spitter.innerText = fixedjson1;
 
   //bear func
 
