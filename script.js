@@ -140,7 +140,6 @@ async function displayColoredName(nickName) {
   }
 
   coloredNickP.innerHTML = "";
-
   for (let i = 0; i < nickName.length; i++) {
     const coloredNickSpan = document.createElement("span");
     coloredNickSpan.style.color = allColors[i];
