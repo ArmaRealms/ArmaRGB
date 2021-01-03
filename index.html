@@ -1,31 +1,29 @@
 <html>
   <head>
-    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="assets/images/nd-128x128.png" type="image/x-icon">
     <title>RGB Gradient Creator</title>
   </head>
   <body class="container" style="background-color: rgb(0, 0, 0);">
-    <h1 style="color: rgb(255, 255, 255);">RGB Gradients</h2>
-    <p style="color: rgb(200, 200, 200);">Hex color Minecraft gradient creator</p>
+    <h1 class="white">RGB Gradients</h2>
+    <p class="white">Hex color Minecraft gradient creator</p>
     <div class="editors col-md-2">
-      <label for="color1" style="color: rgb(255, 255, 255);">First Hex Color</label> 
+      <label for="color1" class="white">First Hex Color</label> 
       <input class="form-control col-md-2" id="color1" name="color1" type="text" placeholder="Color 1 (hex, rgb, rgba)" value="#0000ff" onchange="javascript: updateSpitter()">
       
-      <label for="color2" style="color: rgb(255, 255, 255);">Second Hex Color</label>
+      <label for="color2" class="white">Second Hex Color</label>
       <input class="form-control col-md-2" id="color2" name="color2" type="text" placeholder="Color 2 (hex, rgb, rgba)" value="#ff3300" onchange="javascript: updateSpitter()">
 
-      <label for="steps" style="color: rgb(255, 255, 255);">Message</label>
+      <label for="steps" class="white">Message</label>
       <input class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="Nether Depths" onchange="javascript: updateSpitter()">
-      
-      <button class="btn btn-success btn-large" onclick="javascript: updateSpitter()">Update Message</button>
-
-    </div><div class="col-md-2">
+    </div>
+    <div class="col-md-2">
       <div id="colors"></div>
     </div>
     <pre id="spitter"></pre>
     <div id="coloredNick"></div>
-    <p style="color: rgb(90, 90, 90);">Thanks to <a href="https://github.com/oli-idk">oli-idk</a></p>
+    <p style="color: #666">Thanks to <a href="https://github.com/oli-idk">oli-idk</a></p>
     <script src="script.js"></script>
   </body>
 </html>

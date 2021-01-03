@@ -1,6 +1,9 @@
 .color {
   width: 100%;
 }
+.white {
+  color: #fff
+}
 #colors {
   height: 120px;
   display: flex;
