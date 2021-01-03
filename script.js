@@ -115,7 +115,7 @@ function updateSpitter() {
   }
   document.getElementById("colors").innerHTML = html.join("");
   //update the pre element
-  fixedjson1 = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "").replace(/ /g, "");
+  fixedjson1 = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "");
   spitter.innerText = fixedjson1;
 
   //bear func
