@@ -1,22 +1,16 @@
 .color {
   width: 100%;
 }
-.textboxes {
-  background-color:#44111155;
-  border-color:#55222255;
+.darktextboxes {
+  background-color:#111;
+  border-color:#222;
+  color:white;
+}
+.darktext {
   color:white;
 }
 .bg {
   background-color:#000000;
-  background-image:
-  linear-gradient(
-    rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0.7)
-  ),
-  url(./assets/images/background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #colors {
   height: 120px;

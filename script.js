@@ -36,6 +36,19 @@ function processValue(el) {
   }
 }
 
+function darkMode() {
+  document.getElementById('title').classList.toggle("darktext");
+  document.getElementById('label1').classList.toggle("darktext");
+  document.getElementById('label2').classList.toggle("darktext");
+  document.getElementById('label3').classList.toggle("darktext");
+  document.getElementById('label4').classList.toggle("darktext");
+  document.getElementById('color1').classList.toggle("darktextboxes");
+  document.getElementById('color2').classList.toggle("darktextboxes");
+  document.getElementById('nickname').classList.toggle("darktextboxes");
+  document.getElementById('spitter').classList.toggle("darktextboxes");
+  document.getElementById('bg').classList.toggle("bg");
+}
+
 //return a workable RGB int array [r,g,b] from rgb/rgba representation
 function processRGB(val) {
   var rgb = val.split("(")[1].split(")")[0].split(",");
