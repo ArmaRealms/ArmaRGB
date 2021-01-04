@@ -35,6 +35,18 @@ function processValue(el) {
     }
   }
 }
+function copyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  document.execCommand('copy');
+  alert('Copied output!')
+  document.body.removeChild(textArea);
+}
 
 function darkMode() {
   document.getElementById('title').classList.toggle("darktext");
@@ -42,6 +54,7 @@ function darkMode() {
   document.getElementById('label2').classList.toggle("darktext");
   document.getElementById('label3').classList.toggle("darktext");
   document.getElementById('label4').classList.toggle("darktext");
+  document.getElementById('label5').classList.toggle("darktext");
   document.getElementById('color1').classList.toggle("darktextboxes");
   document.getElementById('color2').classList.toggle("darktextboxes");
   document.getElementById('nickname').classList.toggle("darktextboxes");
@@ -52,11 +65,11 @@ function darkMode() {
 function showError() {
   if (document.getElementById('spitter').textContent.length > "256") {
     document.getElementById('error').style.display = "block";
-    document.getElementById('spitter').style.height = "95px";
+    document.getElementById('spitter').style.height = "70px";
     document.getElementById('spitter').style.marginBottom = "5px";
   } else {
     document.getElementById('error').style.display = "none";
-    document.getElementById('spitter').style.height = "120px";
+    document.getElementById('spitter').style.height = "95px";
     document.getElementById('spitter').style.marginBottom = "10px";
   }
 }
