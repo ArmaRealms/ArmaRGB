@@ -6,8 +6,7 @@ const nickName = document.getElementById("nickname");
 const coloredNick = document.getElementById("coloredNick");
 const coloredNickP = document.createElement("p");
 const gradiantDiv = document.getElementById("colors").children;
-let newNick = nickName.value;
-nickName.addEventListener("input", (e) => (newNick = e.target.value));
+var newNick = nickName.value;
 
 // constants for switch/case checking representation type
 const HEX = 1;
@@ -68,6 +67,7 @@ function processHEX(val) {
 }
 
 function updateSpitter() {
+  newNick = nickName.value
   //attach start value
   var hasSpun = 0;
   val1El.dataType = getType(val1El.value);
@@ -114,7 +114,6 @@ function updateSpitter() {
   spitter.innerText = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "");
 
   //bear func
-
   displayColoredName(newNick);
 }
 /**
