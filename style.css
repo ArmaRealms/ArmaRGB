@@ -23,6 +23,7 @@
 }
 .bg {
   background-color:#000000;
+  font-family: Quicksand;
 }
 #colors {
   height: 120px;
@@ -44,6 +45,41 @@
 @font-face {
    font-family: MinecraftBoldItalic;
    src: url(./assets/fonts/MinecraftBoldItalic.otf);
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(./assets/fonts/Quicksand/300.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(./assets/fonts/Quicksand/500.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(./assets/fonts/Quicksand/600.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(./assets/fonts/Quicksand/700.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: regular;
+  font-display: swap;
+  font-weight: 400;
+  src: url(./assets/fonts/Quicksand/regular.ttf) format('truetype');
 }
 #coloredNick p {
   font-size: 4rem;
