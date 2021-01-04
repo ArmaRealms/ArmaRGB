@@ -1,6 +1,11 @@
 .color {
   width: 100%;
 }
+.textboxes {
+  background-color:#111;
+  border-color:#222;
+  color:white;
+}
 #colors {
   height: 120px;
   display: flex;
