@@ -111,8 +111,8 @@ function updateSpitter() {
   }
   document.getElementById("colors").innerHTML = html.join("");
   //update the pre element
-  spitter.innerText = JSON.stringify(essentialscolorsout).replace("[", "").replace("]", "").replace(/,/g, "").replace(/"/g, "");
-
+  essentialscolorsout.forEach(p => { if (p.includes(' ')) { essentialscolorsout[essentialscolorsout.indexOf(p)] = ' ' } });
+  spitter.innerText = essentialscolorsout.join('')
   //bear func
   displayColoredName(newNick);
 }
