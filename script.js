@@ -54,19 +54,13 @@ darkMode()
 function darkMode() {
   if (document.getElementById('darkmode').checked == true){
     document.getElementById('title').classList.add("darktext");
-    document.getElementById('label1').classList.add("darktext");
-    document.getElementById('label2').classList.add("darktext");
-    document.getElementById('label3').classList.add("darktext");
+    document.getElementById('input').classList.add("darktext");
     document.getElementById('label4').classList.add("darktext");
     document.getElementById('label5').classList.add("darktext");
-    document.getElementById('error').classList.remove("errortext");
-    document.getElementById('error').classList.add("darkerrortext");
-    document.getElementById('graylabel1').classList.remove("gray");
-    document.getElementById('graylabel1').classList.add("darkgray");
-    document.getElementById('graylabel2').classList.remove("gray");
-    document.getElementById('graylabel2').classList.add("darkgray");
-    document.getElementById('graylabel3').classList.remove("gray");
-    document.getElementById('graylabel3').classList.add("darkgray");
+    document.getElementById('error').classList.replace("errortext", "darkerrortext");
+    document.getElementById('graylabel1').classList.replace("gray", "darkgray");
+    document.getElementById('graylabel2').classList.replace("gray", "darkgray");
+    document.getElementById('graylabel3').classList.replace("gray", "darkgray");
     document.getElementById('color1').classList.add("darktextboxes");
     document.getElementById('color2').classList.add("darktextboxes");
     document.getElementById('nickname').classList.add("darktextboxes");
@@ -74,19 +68,13 @@ function darkMode() {
     document.getElementById('bg').classList.add("bg");
   } else {
     document.getElementById('title').classList.remove("darktext");
-    document.getElementById('label1').classList.remove("darktext");
-    document.getElementById('label2').classList.remove("darktext");
-    document.getElementById('label3').classList.remove("darktext");
+    document.getElementById('input').classList.remove("darktext");
     document.getElementById('label4').classList.remove("darktext");
     document.getElementById('label5').classList.remove("darktext");
-    document.getElementById('error').classList.add("errortext");
-    document.getElementById('error').classList.remove("darkerrortext");
-    document.getElementById('graylabel1').classList.add("gray");
-    document.getElementById('graylabel1').classList.remove("darkgray");
-    document.getElementById('graylabel2').classList.add("gray");
-    document.getElementById('graylabel2').classList.remove("darkgray");
-    document.getElementById('graylabel3').classList.add("gray");
-    document.getElementById('graylabel3').classList.remove("darkgray");
+    document.getElementById('error').classList.replace("darkerrortext", "errortext");
+    document.getElementById('graylabel1').classList.replace("darkgray", "gray");
+    document.getElementById('graylabel2').classList.replace("darkgray", "gray");
+    document.getElementById('graylabel3').classList.replace("darkgray", "gray");
     document.getElementById('color1').classList.remove("darktextboxes");
     document.getElementById('color2').classList.remove("darktextboxes");
     document.getElementById('nickname').classList.remove("darktextboxes");
