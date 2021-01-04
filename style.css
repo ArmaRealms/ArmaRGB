@@ -9,6 +9,18 @@
 .darktext {
   color:white;
 }
+.darkgray {
+  color:darkgray;
+}
+.gray {
+  color:gray;
+}
+.darkerrortext {
+  color:red;
+}
+.errortext {
+  color:darkred;
+}
 .bg {
   background-color:#000000;
 }

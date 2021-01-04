@@ -55,6 +55,14 @@ function darkMode() {
   document.getElementById('label3').classList.toggle("darktext");
   document.getElementById('label4').classList.toggle("darktext");
   document.getElementById('label5').classList.toggle("darktext");
+  document.getElementById('error').classList.toggle("errortext");
+  document.getElementById('error').classList.toggle("darkerrortext");
+  document.getElementById('graylabel1').classList.toggle("gray");
+  document.getElementById('graylabel1').classList.toggle("darkgray");
+  document.getElementById('graylabel2').classList.toggle("gray");
+  document.getElementById('graylabel2').classList.toggle("darkgray");
+  document.getElementById('graylabel3').classList.toggle("gray");
+  document.getElementById('graylabel3').classList.toggle("darkgray");
   document.getElementById('color1').classList.toggle("darktextboxes");
   document.getElementById('color2').classList.toggle("darktextboxes");
   document.getElementById('nickname').classList.toggle("darktextboxes");
