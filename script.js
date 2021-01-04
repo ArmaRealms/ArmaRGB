@@ -49,6 +49,18 @@ function darkMode() {
   document.getElementById('bg').classList.toggle("bg");
 }
 
+function showError() {
+  if (document.getElementById('spitter').textContent.length > "256") {
+    document.getElementById('error').style.display = "block";
+    document.getElementById('spitter').style.height = "95px";
+    document.getElementById('spitter').style.marginBottom = "5px";
+  } else {
+    document.getElementById('error').style.display = "none";
+    document.getElementById('spitter').style.height = "120px";
+    document.getElementById('spitter').style.marginBottom = "10px";
+  }
+}
+
 //return a workable RGB int array [r,g,b] from rgb/rgba representation
 function processRGB(val) {
   var rgb = val.split("(")[1].split(")")[0].split(",");
@@ -128,6 +140,7 @@ function updateSpitter() {
   spitter.innerText = essentialscolorsout.join('')
   //bear func
   displayColoredName(newNick);
+  showError()
 }
 /**
  * padding function:
