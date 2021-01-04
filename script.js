@@ -48,26 +48,51 @@ function copyTextToClipboard(text) {
   document.body.removeChild(textArea);
 }
 
+document.getElementById('darkmode').checked = true
+darkMode()
+
 function darkMode() {
-  document.getElementById('title').classList.toggle("darktext");
-  document.getElementById('label1').classList.toggle("darktext");
-  document.getElementById('label2').classList.toggle("darktext");
-  document.getElementById('label3').classList.toggle("darktext");
-  document.getElementById('label4').classList.toggle("darktext");
-  document.getElementById('label5').classList.toggle("darktext");
-  document.getElementById('error').classList.toggle("errortext");
-  document.getElementById('error').classList.toggle("darkerrortext");
-  document.getElementById('graylabel1').classList.toggle("gray");
-  document.getElementById('graylabel1').classList.toggle("darkgray");
-  document.getElementById('graylabel2').classList.toggle("gray");
-  document.getElementById('graylabel2').classList.toggle("darkgray");
-  document.getElementById('graylabel3').classList.toggle("gray");
-  document.getElementById('graylabel3').classList.toggle("darkgray");
-  document.getElementById('color1').classList.toggle("darktextboxes");
-  document.getElementById('color2').classList.toggle("darktextboxes");
-  document.getElementById('nickname').classList.toggle("darktextboxes");
-  document.getElementById('spitter').classList.toggle("darktextboxes");
-  document.getElementById('bg').classList.toggle("bg");
+  if (document.getElementById('darkmode').checked == true){
+    document.getElementById('title').classList.add("darktext");
+    document.getElementById('label1').classList.add("darktext");
+    document.getElementById('label2').classList.add("darktext");
+    document.getElementById('label3').classList.add("darktext");
+    document.getElementById('label4').classList.add("darktext");
+    document.getElementById('label5').classList.add("darktext");
+    document.getElementById('error').classList.remove("errortext");
+    document.getElementById('error').classList.add("darkerrortext");
+    document.getElementById('graylabel1').classList.remove("gray");
+    document.getElementById('graylabel1').classList.add("darkgray");
+    document.getElementById('graylabel2').classList.remove("gray");
+    document.getElementById('graylabel2').classList.add("darkgray");
+    document.getElementById('graylabel3').classList.remove("gray");
+    document.getElementById('graylabel3').classList.add("darkgray");
+    document.getElementById('color1').classList.add("darktextboxes");
+    document.getElementById('color2').classList.add("darktextboxes");
+    document.getElementById('nickname').classList.add("darktextboxes");
+    document.getElementById('spitter').classList.add("darktextboxes");
+    document.getElementById('bg').classList.add("bg");
+  } else {
+    document.getElementById('title').classList.remove("darktext");
+    document.getElementById('label1').classList.remove("darktext");
+    document.getElementById('label2').classList.remove("darktext");
+    document.getElementById('label3').classList.remove("darktext");
+    document.getElementById('label4').classList.remove("darktext");
+    document.getElementById('label5').classList.remove("darktext");
+    document.getElementById('error').classList.add("errortext");
+    document.getElementById('error').classList.remove("darkerrortext");
+    document.getElementById('graylabel1').classList.add("gray");
+    document.getElementById('graylabel1').classList.remove("darkgray");
+    document.getElementById('graylabel2').classList.add("gray");
+    document.getElementById('graylabel2').classList.remove("darkgray");
+    document.getElementById('graylabel3').classList.add("gray");
+    document.getElementById('graylabel3').classList.remove("darkgray");
+    document.getElementById('color1').classList.remove("darktextboxes");
+    document.getElementById('color2').classList.remove("darktextboxes");
+    document.getElementById('nickname').classList.remove("darktextboxes");
+    document.getElementById('spitter').classList.remove("darktextboxes");
+    document.getElementById('bg').classList.remove("bg");
+  }
 }
 
 function showError() {
