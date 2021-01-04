@@ -81,9 +81,6 @@ function updateSpitter() {
   var essentialscolorsout = [
     //yes
   ];
-  var othercolorsout = [
-    //yes
-  ];
   // the pre element where we spit array to user
   var spitter = document.getElementById("spitter");
 
