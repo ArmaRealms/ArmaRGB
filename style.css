@@ -6,9 +6,6 @@
   border-color:#222;
   color:white;
 }
-.darktext {
-  color:white;
-}
 .darkgray {
   color:darkgray;
 }
@@ -21,8 +18,14 @@
 .errortext {
   color:darkred;
 }
-.bg {
-  background-color:#000000;
+body.dark {
+  background-color:black;
+  color:white;
+}
+select.dark {
+  background-color:#111;
+  border-color:#222;
+  color:white;
 }
 #colors {
   height: 120px;

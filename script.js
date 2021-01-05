@@ -7,6 +7,7 @@ const coloredNick = document.getElementById("coloredNick");
 const coloredNickP = document.createElement("p");
 const gradiantDiv = document.getElementById("colors").children;
 var newNick = nickName.value;
+var rgbtype = 'chat (&#rrggbb)';
 
 // constants for switch/case checking representation type
 const HEX = 1;
@@ -53,33 +54,27 @@ darkMode()
 
 function darkMode() {
   if (document.getElementById('darkmode').checked == true){
-    document.getElementById('title').classList.add("darktext");
-    document.getElementById('input').classList.add("darktext");
-    document.getElementById('label4').classList.add("darktext");
-    document.getElementById('label5').classList.add("darktext");
-    document.getElementById('error').classList.replace("errortext", "darkerrortext");
+    document.getElementById('types').classList.add("dark");
+    document.body.classList.add('dark');
     document.getElementById('graylabel1').classList.replace("gray", "darkgray");
     document.getElementById('graylabel2').classList.replace("gray", "darkgray");
     document.getElementById('graylabel3').classList.replace("gray", "darkgray");
+    document.getElementById('error').classList.replace("errortext", "darkerrortext");
     document.getElementById('color1').classList.add("darktextboxes");
     document.getElementById('color2').classList.add("darktextboxes");
     document.getElementById('nickname').classList.add("darktextboxes");
     document.getElementById('spitter').classList.add("darktextboxes");
-    document.getElementById('bg').classList.add("bg");
   } else {
-    document.getElementById('title').classList.remove("darktext");
-    document.getElementById('input').classList.remove("darktext");
-    document.getElementById('label4').classList.remove("darktext");
-    document.getElementById('label5').classList.remove("darktext");
-    document.getElementById('error').classList.replace("darkerrortext", "errortext");
+    document.getElementById('types').classList.remove("dark");
+    document.body.classList.remove('dark');
     document.getElementById('graylabel1').classList.replace("darkgray", "gray");
     document.getElementById('graylabel2').classList.replace("darkgray", "gray");
     document.getElementById('graylabel3').classList.replace("darkgray", "gray");
+    document.getElementById('error').classList.replace("darkerrortext", "errortext");
     document.getElementById('color1').classList.remove("darktextboxes");
     document.getElementById('color2').classList.remove("darktextboxes");
     document.getElementById('nickname').classList.remove("darktextboxes");
     document.getElementById('spitter').classList.remove("darktextboxes");
-    document.getElementById('bg').classList.remove("bg");
   }
 }
 
@@ -137,7 +132,7 @@ function updateSpitter() {
   var colors = [
     // somewhere to dump gradient
   ];
-  var essentialscolorsout = [
+  var colorsout = [
     //yes
   ];
   // the pre element where we spit array to user
@@ -161,7 +156,11 @@ function updateSpitter() {
 
     var clampedB = valClampRGB[2] > 0 ? pad(Math.round((valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2) : pad(Math.round(val1RGB[2] + (valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2);
     colors[i] = ["#", clampedR, clampedG, clampedB].join("");
-    essentialscolorsout[i] = ["&#", clampedR, clampedG, clampedB, nickspaced[i]].join("");
+    if (rgbtype.includes('&#rrggbb')) {
+      colorsout[i] = ["&#", clampedR, clampedG, clampedB, nickspaced[i]].join("");
+    } else {
+      colorsout[i] = ["&x", clampedR.split("").toString().replace(/,/g, "&"), "&", clampedG.split("").toString().replace(/,/g, "&"), "&", clampedB.split("").toString().replace(/,/g, "&"), nickspaced[i]].join("");
+    }
   }
   //build div representation of gradient
   var html = [];
@@ -170,8 +169,13 @@ function updateSpitter() {
   }
   document.getElementById("colors").innerHTML = html.join("");
   //update the pre element
-  essentialscolorsout.forEach(p => { if (p.includes(' ')) { essentialscolorsout[essentialscolorsout.indexOf(p)] = ' ' } });
-  spitter.innerText = essentialscolorsout.join('')
+  colorsout.forEach(p => { if (p.includes(' ')) { colorsout[colorsout.indexOf(p)] = ' ' } });
+  if (rgbtype.includes('/nick')) {
+    spitter.innerText = '/nick ' + colorsout.join('')
+  } else {
+    spitter.innerText = colorsout.join('')
+  }
+  console.log(document.getElementById('types').textContent)
   //bear func
   displayColoredName(newNick);
   showError()
