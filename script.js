@@ -120,13 +120,19 @@ function processHEX(val) {
   return [parseInt(r, 16), parseInt(g, 16), parseInt(b, 16)];
 }
 
-function updateSpitter() {
-  newNick = nickName.value
+function updateSpitter(event) {
   if (rgbtype.includes('/nick')) {
-    newNick = nickName.value.replace(/ /g, '');
+    e = nickName.value;
     var letters = /^[0-9a-zA-Z_]+$/;
-    if(!newNick.match(letters)) alert('not alphanumeric');
+    if(!e.match(letters)) nickName.value = nickName.value.replace(event.data, '');
+    e = nickName.value;
+    if(!e.match(letters)) nickName.value = 'Gradieeennnttt';
+    if (rgbtype.includes(' ')) {
+      document.getElementById("nickname").value = document.getElementById("nickname").value.replace(/ /g, '');
+      newNick = nickName.value.replace(/ /g, '');
+    }
   }
+  newNick = nickName.value
   //attach start value
   var hasSpun = 0;
   val1El.dataType = getType(val1El.value);
