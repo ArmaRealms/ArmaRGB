@@ -18,17 +18,15 @@
 .errortext {
   color:darkred;
 }
+.pp::-webkit-scrollbar {
+  display: none; 
+}
+.pp {
+  -ms-overflow-style: none; scrollbar-width: none;
+}
 body.dark {
   background-color:black;
   color:white;
-  scrollbar-face-color: #646464;
-  scrollbar-base-color: #646464;
-  scrollbar-3dlight-color: #646464;
-  scrollbar-highlight-color: #646464;
-  scrollbar-track-color: #000;
-  scrollbar-arrow-color: #000;
-  scrollbar-shadow-color: #646464;
-  scrollbar-darkshadow-color: #646464;
 }
 select.dark {
   background-color:#111;
