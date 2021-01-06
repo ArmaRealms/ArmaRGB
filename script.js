@@ -159,7 +159,7 @@ function updateSpitter() {
     if (rgbtype.includes('&#rrggbb')) {
       colorsout[i] = ["&#", clampedR, clampedG, clampedB, nickspaced[i]].join("");
     } else {
-      colorsout[i] = ["&x&", clampedR.split("").toString().replace(/,/g, "&"), "&", clampedG.split("").toString().replace(/,/g, "&"), "&", clampedB.split("").toString().replace(/,/g, "&"), nickspaced[i]].join("");
+      colorsout[i] = ["&x&", clampedR.split("").join("&") + '&', clampedG.split("").join("&") + '&', clampedB.split("").join("&"), nickspaced[i]].join("");
     }
   }
   //build div representation of gradient
