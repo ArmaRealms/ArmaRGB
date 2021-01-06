@@ -122,6 +122,11 @@ function processHEX(val) {
 
 function updateSpitter() {
   newNick = nickName.value
+  if (rgbtype.includes('/nick')) {
+    newNick = nickName.value.replace(/ /g, '');
+    var letters = /^[0-9a-zA-Z_]+$/;
+    if(!newNick.match(letters)) alert('not alphanumeric');
+  }
   //attach start value
   var hasSpun = 0;
   val1El.dataType = getType(val1El.value);
@@ -139,11 +144,11 @@ function updateSpitter() {
   var spitter = document.getElementById("spitter");
 
   //the number of steps in the gradient
-  var stepsInt = parseInt(nickname.value.length, 10);
+  var stepsInt = parseInt(newNick.length, 10);
   //the percentage representation of the step
   var stepsPerc = 100 / (stepsInt + 1);
 
-  var nickspaced = nickname.value.split("");
+  var nickspaced = newNick.split("");
 
   // diffs between two values
   var valClampRGB = [val2RGB[0] - val1RGB[0], val2RGB[1] - val1RGB[1], val2RGB[2] - val1RGB[2]];
@@ -177,7 +182,6 @@ function updateSpitter() {
   } else {
     spitter.innerText = colorsout.join('')
   }
-  console.log(document.getElementById('types').textContent)
   //bear func
   displayColoredName(newNick);
   showError()
