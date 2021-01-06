@@ -172,6 +172,8 @@ function updateSpitter() {
   colorsout.forEach(p => { if (p.includes(' ')) { colorsout[colorsout.indexOf(p)] = ' ' } });
   if (rgbtype.includes('/nick')) {
     spitter.innerText = '/nick ' + colorsout.join('')
+  } else if (rgbtype.includes('console')) {
+    spitter.innerText = colorsout.join('').replace(/&/g, '§')
   } else {
     spitter.innerText = colorsout.join('')
   }

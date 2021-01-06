@@ -10,16 +10,16 @@
 
     <div id="header">
       <h1 id="title">RGB Gradients</h1>
-      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">Hex color Minecraft gradient creator</p>
+      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">Minecraft Hex Gradients</p>
     </div>
 
     <div id="input" class="col-md-2" style="padding-left: 0;">
       <label id="label1" for="color1">First Hex Color</label> 
-      <input class="form-control col-md-2" id="color1" name="color1" type="text" placeholder="Color 1 (hex, rgb, rgba)" value="#0000ff" oninput="updateSpitter()" onchange="updateSpitter()">
+      <input class="form-control col-md-2" id="color1" name="color1" type="color" placeholder="Color 1 (hex, rgb, rgba)" value="#0000ff" oninput="updateSpitter()" onchange="updateSpitter()">
       <label id="label2" for="color2">Second Hex Color</label>
-      <input class="form-control col-md-2" id="color2" name="color2" type="text" placeholder="Color 2 (hex, rgb, rgba)" value="#ff3300" oninput="updateSpitter()" onchange="updateSpitter()">
+      <input class="form-control col-md-2" id="color2" name="color2" type="color" placeholder="Color 2 (hex, rgb, rgba)" value="#ff3300" oninput="updateSpitter()" onchange="updateSpitter()">
       <label id="label3" for="steps">Message</label>
-      <input class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="Nether Depths" oninput="updateSpitter()" onchange="updateSpitter()">
+      <input class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="Gradieeennnttt" oninput="updateSpitter()" onchange="updateSpitter()">
     </div>
 
     <div id="colors" class="col-md-2" style="padding-left: 0;"></div>
@@ -41,6 +41,7 @@
           <option value='1'>chat (&x&r&r&g&g&b&b)</option>
           <option value='2'>/nick (&#rrggbb)</option>
           <option value='3'>/nick (&x&r&r&g&g&b&b)</option>
+          <option value='4'>console (§x§r§r§g§g§b§b)</option>
         </select>
       </div>
       <div id="appearance">
