@@ -25,7 +25,7 @@ document.getElementById('darkmode').checked = true
 darkMode()
 
 function darkMode() {
-  if (document.getElementById('darkmode').checked == true){
+  if (document.getElementById('darkmode').checked == true) {
     document.getElementById('types').classList.add("dark");
     document.body.classList.add('dark');
     document.getElementById('graylabel1').classList.replace("gray", "darkgray");
@@ -142,11 +142,27 @@ function updateSpitter(event) {
   var colors = generateColor(val2El.value,val1El.value,newNick.length);
 
   var nickspaced = newNick.split("");
+  var colorspp = ('&' + colors.join('').split('').join('&')).match(/.{1,12}/g);
   for (var i = 0; i < newNick.length; i++) {
+    colorspp[i] = colorspp[i].replace('&', '&x&');
+    if (document.getElementById('bold').checked == true) {
+      nickspaced[i] = '&l' + nickspaced[i]
+    }
     essentialscolorsout[i] = '&#' + colors[i] + nickspaced[i]
-    othercolorsout[i] = '&x&' + colors[i] + nickspaced[i] // still working on this
+    othercolorsout[i] = colorspp[i] + nickspaced[i]
   }
-  spitter.innerText = essentialscolorsout.join('');
+  var output = ''
+  if (rgbtype.includes('x')) {
+    if (rgbtype.includes('§')) {
+      output = othercolorsout.join('').replace(/&/g, '§');
+    } else {
+      output = othercolorsout.join('');
+    }
+  } else {
+    output = essentialscolorsout.join('');
+  }
+  if (rgbtype.includes('/nick')) output = '/nick ' + output;
+  spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
 }
@@ -164,6 +180,11 @@ function pad(n, width, z) {
 updateSpitter();
 
 async function displayColoredName(nickName, colors) {
+  if (document.getElementById('bold').checked == true) {
+    coloredNick.classList.replace('minecraft', 'minecraftbold');
+  } else {
+    coloredNick.classList.replace('minecraftbold', 'minecraft');
+  }
   coloredNickP.innerHTML = "";
   for (let i = 0; i < nickName.length; i++) {
     const coloredNickSpan = document.createElement("span");
