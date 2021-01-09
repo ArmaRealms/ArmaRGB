@@ -34,7 +34,7 @@ function darkMode() {
     document.getElementById('error').classList.replace("errortext", "darkerrortext");
     document.getElementById('color1').classList.add("darktextboxes");
     document.getElementById('color2').classList.add("darktextboxes");
-    document.getElementById('nickname').classList.add("darktextboxes");
+    nickName.classList.add("darktextboxes");
     document.getElementById('spitter').classList.add("darktextboxes");
   } else {
     document.getElementById('types').classList.remove("dark");
@@ -45,7 +45,7 @@ function darkMode() {
     document.getElementById('error').classList.replace("darkerrortext", "errortext");
     document.getElementById('color1').classList.remove("darktextboxes");
     document.getElementById('color2').classList.remove("darktextboxes");
-    document.getElementById('nickname').classList.remove("darktextboxes");
+    nickName.classList.remove("darktextboxes");
     document.getElementById('spitter').classList.remove("darktextboxes");
   }
 }
