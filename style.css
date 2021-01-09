@@ -91,5 +91,10 @@ select.dark {
 }
 #coloredNick p {
   font-size: 4rem;
+}
+.minecraft {
   font-family: MinecraftRegular;
+}
+.minecraftbold {
+  font-family: MinecraftBold;
 }

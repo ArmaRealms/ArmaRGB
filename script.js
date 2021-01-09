@@ -167,10 +167,17 @@ function updateSpitter(event) {
 
     var clampedB = valClampRGB[2] > 0 ? pad(Math.round((valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2) : pad(Math.round(val1RGB[2] + (valClampRGB[2] / 100) * (stepsPerc * (i + 1))).toString(16), 2);
     colors[i] = ["#", clampedR, clampedG, clampedB].join("");
-    if (rgbtype.includes('&#rrggbb')) {
-      colorsout[i] = ["&#", clampedR, clampedG, clampedB, nickspaced[i]].join("");
+    var bold = ''
+    if (document.getElementById('bold').checked == true) {
+      document.getElementById('coloredNick').classList.replace("minecraft", "minecraftbold");
+      bold = '&l'
     } else {
-      colorsout[i] = ["&x&", clampedR.split("").join("&") + '&', clampedG.split("").join("&") + '&', clampedB.split("").join("&"), nickspaced[i]].join("");
+      document.getElementById('coloredNick').classList.replace("minecraftbold", "minecraft");
+    }
+    if (rgbtype.includes('&#rrggbb')) {
+      colorsout[i] = `&#${clampedR}${clampedG}${clampedB}${bold}${nickspaced[i]}`;
+    } else {
+      colorsout[i] = `&x&${clampedR.split("").join("&")}&${clampedG.split("").join("&")}&${clampedB.split("").join("&")}${bold}${nickspaced[i]}`;
     }
   }
   //build div representation of gradient

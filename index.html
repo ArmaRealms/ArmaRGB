@@ -31,7 +31,7 @@
       <p id="error" style="display: none; margin-bottom: 10px;">This is more than 256 characters and may not fit in the chat box. You may ignore this if you're using a server console.</p>
     </div>
 
-    <div id="coloredNick" style="word-wrap: break-word;"></div>
+    <div id="coloredNick" class="minecraft" style="word-wrap: break-word;"></div>
 
     <div id="options">
       <div id="typeslist">
@@ -44,9 +44,13 @@
           <option value='4'>console (§x§r§r§g§g§b§b)</option>
         </select>
       </div>
+      <div id="format">
+        <input type="checkbox" id="bold" onclick="updateSpitter(event);"></input>
+        <label for="bold" style="margin-bottom: 0px;margin-top: 15px;"> Bold output</label>
+      </div>
       <div id="appearance">
         <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
-        <label for="darkmode" style="margin-bottom: 0px;margin-top: 15px;"> Dark Mode</label>
+        <label for="darkmode" style="margin-bottom: 0px;margin-top: 5px;"> Dark Mode</label>
       </div>
       <p id="graylabel3" class="gray" style="margin-bottom: 0px;margin-top: 10px;">Forked from <a href="https://easymc.birdflop.com/Hexnicks/">EasyMC</a></p>
     </div>
