@@ -129,6 +129,10 @@ function updateSpitter(event) {
       if(!nickName.value.match(letters)) nickName.value = 'Gradieeennnttt';
     }
   }
+  if (rgbtype.includes('/ranknick')) {
+    nickName.value = nickName.value.toUpperCase();
+    document.getElementById('bold').checked = true
+  }
   newNick = nickName.value
   if(newNick == '') {
     newNick = 'Type something!'
@@ -145,9 +149,7 @@ function updateSpitter(event) {
   var colorspp = ('&' + colors.join('').split('').join('&')).match(/.{1,12}/g);
   for (var i = 0; i < newNick.length; i++) {
     colorspp[i] = colorspp[i].replace('&', '&x&');
-    if (document.getElementById('bold').checked == true) {
-      nickspaced[i] = '&l' + nickspaced[i]
-    }
+    if (document.getElementById('bold').checked == true) nickspaced[i] = '&l' + nickspaced[i];
     essentialscolorsout[i] = '&#' + colors[i] + nickspaced[i]
     othercolorsout[i] = colorspp[i] + nickspaced[i]
   }
@@ -162,6 +164,7 @@ function updateSpitter(event) {
     output = essentialscolorsout.join('');
   }
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
+  if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output.toUpperCase();
   spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
@@ -181,6 +184,8 @@ updateSpitter();
 
 async function displayColoredName(nickName, colors) {
   if (document.getElementById('bold').checked == true) {
+    coloredNick.classList.replace('minecraft', 'minecraftbold');
+  } else if (rgbtype.includes('/ranknick')) {
     coloredNick.classList.replace('minecraft', 'minecraftbold');
   } else {
     coloredNick.classList.replace('minecraftbold', 'minecraft');
