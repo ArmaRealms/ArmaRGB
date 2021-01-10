@@ -168,6 +168,8 @@ function updateSpitter(event) {
   }
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
   if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output;
+  if (rgbtype.includes('#')) output = output.replace(/.{8}(?=\ )/g, '');
+  if (rgbtype.includes('x')) output = output.replace(/.{14}(?=\ )/g, '');
   spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
