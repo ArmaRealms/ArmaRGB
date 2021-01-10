@@ -164,7 +164,7 @@ function updateSpitter(event) {
     output = essentialscolorsout.join('');
   }
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
-  if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output.toUpperCase();
+  if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output;
   spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
