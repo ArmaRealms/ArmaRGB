@@ -121,6 +121,7 @@ function generateColor(colorStart,colorEnd,colorCount){
 }
 
 function updateSpitter(event) {
+  nickName.value = nickName.value.replace('  ', ' ');
   if (rgbtype.includes('/nick')) {
     nickName.value = nickName.value.replace(/ /g, '');
     if(nickName.value != '') {
@@ -132,6 +133,7 @@ function updateSpitter(event) {
   if (rgbtype.includes('/ranknick')) {
     nickName.value = nickName.value.toUpperCase();
     document.getElementById('bold').checked = true
+    document.getElementById('italics').checked = false
   }
   newNick = nickName.value
   if(newNick == '') {
@@ -150,6 +152,7 @@ function updateSpitter(event) {
   for (var i = 0; i < newNick.length; i++) {
     colorspp[i] = colorspp[i].replace('&', '&x&');
     if (document.getElementById('bold').checked == true) nickspaced[i] = '&l' + nickspaced[i];
+    if (document.getElementById('italics').checked == true) nickspaced[i] = '&o' + nickspaced[i];
     essentialscolorsout[i] = '&#' + colors[i] + nickspaced[i]
     othercolorsout[i] = colorspp[i] + nickspaced[i]
   }
@@ -183,12 +186,15 @@ function pad(n, width, z) {
 updateSpitter();
 
 async function displayColoredName(nickName, colors) {
+  coloredNick.classList.remove('minecraftbold', 'minecraftibold', 'minecraftitalic');
   if (document.getElementById('bold').checked == true) {
-    coloredNick.classList.replace('minecraft', 'minecraftbold');
-  } else if (rgbtype.includes('/ranknick')) {
-    coloredNick.classList.replace('minecraft', 'minecraftbold');
-  } else {
-    coloredNick.classList.replace('minecraftbold', 'minecraft');
+    if (document.getElementById('italics').checked == true) {
+      coloredNick.classList.add('minecraftibold');
+    } else {
+      coloredNick.classList.add('minecraftbold');
+    }
+  } else if (document.getElementById('italics').checked == true) {
+    coloredNick.classList.add('minecraftitalic');
   }
   coloredNickP.innerHTML = "";
   for (let i = 0; i < nickName.length; i++) {

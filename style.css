@@ -98,3 +98,9 @@ select.dark {
 .minecraftbold {
   font-family: MinecraftBold;
 }
+.minecraftitalic {
+  font-family: MinecraftItalic;
+}
+.minecraftibold {
+  font-family: MinecraftBoldItalic;
+}
