@@ -6,7 +6,7 @@ const nickName = document.getElementById("nickname");
 const coloredNick = document.getElementById("coloredNick");
 const coloredNickP = document.createElement("p");
 var newNick = nickName.value;
-var rgbtype = 'chat (&#rrggbb)';
+var rgbtype = 'Essentials (&#rrggbb)';
 
 function copyTextToClipboard(text) {
   var textArea = document.createElement("textarea");
@@ -141,6 +141,7 @@ function updateSpitter(event) {
   }
   
   var essentialscolorsout = [];
+  var luckpermscolorsout = [];
   var othercolorsout = [];
   // the pre element where we spit array to user
   var spitter = document.getElementById("spitter");
@@ -154,6 +155,7 @@ function updateSpitter(event) {
     if (document.getElementById('bold').checked == true) nickspaced[i] = '&l' + nickspaced[i];
     if (document.getElementById('italics').checked == true) nickspaced[i] = '&o' + nickspaced[i];
     essentialscolorsout[i] = '&#' + colors[i] + nickspaced[i]
+    luckpermscolorsout[i] = '{#' + colors[i] + '}' + nickspaced[i]
     othercolorsout[i] = colorspp[i] + nickspaced[i]
   }
   var output = ''
@@ -163,12 +165,15 @@ function updateSpitter(event) {
     } else {
       output = othercolorsout.join('');
     }
-  } else {
+  } else if (rgbtype.includes('&#')) {
     output = essentialscolorsout.join('');
+  } else {
+    output = luckpermscolorsout.join('');
   }
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
   if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output;
-  if (rgbtype.includes('#')) output = output.replace(/.{8}(?=\ )/g, '');
+  if (rgbtype.includes('&#')) output = output.replace(/.{8}(?=\ )/g, '');
+  if (rgbtype.includes('{#')) output = output.replace(/.{9}(?=\ )/g, '');
   if (rgbtype.includes('x')) output = output.replace(/.{14}(?=\ )/g, '');
   spitter.innerText = output
   displayColoredName(newNick, colors);
