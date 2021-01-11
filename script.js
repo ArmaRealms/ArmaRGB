@@ -24,16 +24,26 @@ function copyTextToClipboard(text) {
 document.getElementById('darkmode').checked = true
 darkMode()
 
+function suggestion() {
+  var request = new XMLHttpRequest();
+  request.open("POST", "https://discordapp.com/api/webhooks/766853283670655006/Iuh527Y5qOUr5-6sGXlSknV-5XsiCBf9952CeJpL5GjZXPv58ADdW6e0EDFoykg5-LKQ");
+  request.setRequestHeader('Content-type', 'application/json');
+  var params = {content: document.getElementById('suggestion').value};
+  request.send(JSON.stringify(params));
+  document.getElementById('suggestion').style.display = "none";
+  document.getElementById('thank').style.display = "block";
+}
+
 function darkMode() {
   if (document.getElementById('darkmode').checked == true) {
     document.getElementById('types').classList.add("dark");
     document.body.classList.add('dark');
     document.getElementById('graylabel1').classList.replace("gray", "darkgray");
     document.getElementById('graylabel2').classList.replace("gray", "darkgray");
-    document.getElementById('graylabel3').classList.replace("gray", "darkgray");
     document.getElementById('error').classList.replace("errortext", "darkerrortext");
     document.getElementById('color1').classList.add("darktextboxes");
     document.getElementById('color2').classList.add("darktextboxes");
+    document.getElementById('suggestion').classList.add("darktextboxes");
     nickName.classList.add("darktextboxes");
     document.getElementById('spitter').classList.add("darktextboxes");
   } else {
@@ -41,10 +51,10 @@ function darkMode() {
     document.body.classList.remove('dark');
     document.getElementById('graylabel1').classList.replace("darkgray", "gray");
     document.getElementById('graylabel2').classList.replace("darkgray", "gray");
-    document.getElementById('graylabel3').classList.replace("darkgray", "gray");
     document.getElementById('error').classList.replace("darkerrortext", "errortext");
     document.getElementById('color1').classList.remove("darktextboxes");
     document.getElementById('color2').classList.remove("darktextboxes");
+    document.getElementById('suggestion').classList.add("darktextboxes");
     nickName.classList.remove("darktextboxes");
     document.getElementById('spitter').classList.remove("darktextboxes");
   }

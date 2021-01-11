@@ -20,6 +20,36 @@
       <input style="border-radius: 10px;" class="form-control col-md-1" id="color2" name="color2" value="FDAD4F" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
       <label id="label3" for="steps">Message</label>
       <input style="border-radius: 10px;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="Gradieeennnttt" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
+      <div id="options">
+        <div id="typeslist">
+          <label style="margin-bottom: 0px; margin-top: 15px;">Type</label>
+          <select style="width:100%; border-radius: 10px; padding-right: 6px; padding-left: 6px; padding-top: 6px; padding-bottom: 6px;" type="select" id="types" onchange="rgbtype = this.options[this.selectedIndex].innerText; updateSpitter(event);">
+            <option value='0'>Essentials (&#rrggbb)</option>
+            <option value='1'>LuckPerms ({#rrggbb})</option>
+            <option value='2'>Other (&x&r&r&g&g&b&b)</option>
+            <option value='3'>/nick (&#rrggbb)</option>
+            <option value='4'>/nick (&x&r&r&g&g&b&b)</option>
+            <option value='5'>/ranknick (&x&r&r&g&g&b&b)</option>
+            <option value='6'>Console (§x§r§r§g§g§b§b)</option>
+          </select>
+        </div>
+        <div id="bald">
+          <input type="checkbox" id="bold" onclick="updateSpitter(event);"></input>
+          <label for="bold" style="margin-bottom: 0px;margin-top: 15px;"> Bold output</label>
+        </div>
+        <div id="italy">
+          <input type="checkbox" id="italics" onclick="updateSpitter(event);"></input>
+          <label for="italics" style="margin-bottom: 0px;margin-top: 0px;"> Italic output</label>
+        </div>
+        <div id="appearance">
+          <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
+          <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Dark Mode</label>
+        </div>
+        <div id="suggestions">
+          <input style="width: 180px; border-radius: 10px; margin-top: 15px;" class="form-control col-md-2" type="text" id="suggestion" placeholder="Suggestions?" onchange="suggestion()"></input>
+          <p id="thank" style="display: none; margin-top: 15px;">Thank you for your suggestion!</p>
+        </div>
+      </div>
     </div>
     <div id="output">
       <label id="label4" for="spitter">Output</label>
@@ -29,34 +59,6 @@
     </div>
 
     <div id="coloredNick" class="minecraft" style="word-wrap: break-word;"></div>
-
-    <div id="options">
-      <div id="typeslist">
-        <label style="margin-bottom: 0px;">Type</label>
-        <select style="width:138px; border-radius: 10px;" type="select" id="types" onchange="rgbtype = this.options[this.selectedIndex].innerText; updateSpitter(event);">
-          <option value='0'>Essentials (&#rrggbb)</option>
-          <option value='1'>LuckPerms ({#rrggbb})</option>
-          <option value='2'>Other (&x&r&r&g&g&b&b)</option>
-          <option value='3'>/nick (&#rrggbb)</option>
-          <option value='4'>/nick (&x&r&r&g&g&b&b)</option>
-          <option value='5'>/ranknick (&x&r&r&g&g&b&b)</option>
-          <option value='6'>Console (§x§r§r§g§g§b§b)</option>
-        </select>
-      </div>
-      <div id="bald">
-        <input type="checkbox" id="bold" onclick="updateSpitter(event);"></input>
-        <label for="bold" style="margin-bottom: 0px;margin-top: 15px;"> Bold output</label>
-      </div>
-      <div id="italy">
-        <input type="checkbox" id="italics" onclick="updateSpitter(event);"></input>
-        <label for="italics" style="margin-bottom: 0px;margin-top: 0px;"> Italic output</label>
-      </div>
-      <div id="appearance">
-        <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
-        <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Dark Mode</label>
-      </div>
-      <p id="graylabel3" class="gray" style="margin-bottom: 0px;margin-top: 10px;">Forked from <a href="https://easymc.birdflop.com/Hexnicks/">EasyMC</a></p>
-    </div>
 
     <script src="script.js"></script>
     <script src="jscolor.js"></script>
