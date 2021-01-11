@@ -33,7 +33,6 @@ function darkMode() {
     document.getElementById('error').classList.replace("errortext", "darkerrortext");
     document.getElementById('color1').classList.add("darktextboxes");
     document.getElementById('color2').classList.add("darktextboxes");
-    document.getElementById('suggestion').classList.add("darktextboxes");
     nickName.classList.add("darktextboxes");
     document.getElementById('spitter').classList.add("darktextboxes");
   } else {
@@ -44,7 +43,6 @@ function darkMode() {
     document.getElementById('error').classList.replace("darkerrortext", "errortext");
     document.getElementById('color1').classList.remove("darktextboxes");
     document.getElementById('color2').classList.remove("darktextboxes");
-    document.getElementById('suggestion').classList.add("darktextboxes");
     nickName.classList.remove("darktextboxes");
     document.getElementById('spitter').classList.remove("darktextboxes");
   }
