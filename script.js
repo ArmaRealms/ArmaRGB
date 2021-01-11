@@ -168,11 +168,25 @@ function updateSpitter(event) {
   } else {
     output = luckpermscolorsout.join('');
   }
+  var num = '';
+  if (rgbtype.includes('&#')) num = 8;
+  if (rgbtype.includes('{#')) num = 9;
+  if (rgbtype.includes('x')) num = 14;
+  if (document.getElementById('bold').checked == true) num = num+2;
+  if (document.getElementById('italics').checked == true) num = num+2;
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
   if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output;
-  if (rgbtype.includes('&#')) output = output.replace(/.{8}(?=\ )/g, '');
-  if (rgbtype.includes('{#')) output = output.replace(/.{9}(?=\ )/g, '');
-  if (rgbtype.includes('x')) output = output.replace(/.{14}(?=\ )/g, '');
+  if (num == 8) output = output.replace(/.{8}(?=\ )/g, '');
+  if (num == 9) output = output.replace(/.{9}(?=\ )/g, '');
+  if (num == 10) output = output.replace(/.{10}(?=\ )/g, '');
+  if (num == 11) output = output.replace(/.{11}(?=\ )/g, '');
+  if (num == 12) output = output.replace(/.{12}(?=\ )/g, '');
+  if (num == 13) output = output.replace(/.{13}(?=\ )/g, '');
+  if (num == 14) output = output.replace(/.{14}(?=\ )/g, '');
+  if (num == 15) output = output.replace(/.{15}(?=\ )/g, '');
+  if (num == 16) output = output.replace(/.{16}(?=\ )/g, '');
+  if (num == 17) output = output.replace(/.{17}(?=\ )/g, '');
+  if (num == 18) output = output.replace(/.{18}(?=\ )/g, '');
   spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
