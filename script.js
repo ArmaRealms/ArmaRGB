@@ -24,16 +24,6 @@ function copyTextToClipboard(text) {
 document.getElementById('darkmode').checked = true
 darkMode()
 
-function suggestion() {
-  var request = new XMLHttpRequest();
-  request.open("POST", "https://discordapp.com/api/webhooks/766853283670655006/Iuh527Y5qOUr5-6sGXlSknV-5XsiCBf9952CeJpL5GjZXPv58ADdW6e0EDFoykg5-LKQ");
-  request.setRequestHeader('Content-type', 'application/json');
-  var params = {content: document.getElementById('suggestion').value};
-  request.send(JSON.stringify(params));
-  document.getElementById('suggestion').style.display = "none";
-  document.getElementById('thank').style.display = "block";
-}
-
 function darkMode() {
   if (document.getElementById('darkmode').checked == true) {
     document.getElementById('types').classList.add("dark");
