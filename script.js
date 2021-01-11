@@ -132,6 +132,8 @@ function updateSpitter(event) {
     nickName.value = nickName.value.toUpperCase();
     document.getElementById('bold').checked = true
     document.getElementById('italics').checked = false
+    document.getElementById('underline').checked = false
+    document.getElementById('strike').checked = false
   }
   newNick = nickName.value
   if(newNick == '') {
@@ -152,6 +154,8 @@ function updateSpitter(event) {
     colorspp[i] = colorspp[i].replace('&', '&x&');
     if (document.getElementById('bold').checked == true) nickspaced[i] = '&l' + nickspaced[i];
     if (document.getElementById('italics').checked == true) nickspaced[i] = '&o' + nickspaced[i];
+    if (document.getElementById('underline').checked == true) nickspaced[i] = '&n' + nickspaced[i];
+    if (document.getElementById('strike').checked == true) nickspaced[i] = '&m' + nickspaced[i];
     essentialscolorsout[i] = '&#' + colors[i] + nickspaced[i]
     luckpermscolorsout[i] = '{#' + colors[i] + '}' + nickspaced[i]
     othercolorsout[i] = colorspp[i] + nickspaced[i]
@@ -174,6 +178,8 @@ function updateSpitter(event) {
   if (rgbtype.includes('x')) num = 14;
   if (document.getElementById('bold').checked == true) num = num+2;
   if (document.getElementById('italics').checked == true) num = num+2;
+  if (document.getElementById('underline').checked == true) num = num+2;
+  if (document.getElementById('strike').checked == true) num = num+2;
   if (rgbtype.includes('/nick')) output = '/nick ' + output;
   if (rgbtype.includes('/ranknick')) output = '/ranknick set ' + output;
   if (num == 8) output = output.replace(/.{8}(?=\ )/g, '');
@@ -187,6 +193,10 @@ function updateSpitter(event) {
   if (num == 16) output = output.replace(/.{16}(?=\ )/g, '');
   if (num == 17) output = output.replace(/.{17}(?=\ )/g, '');
   if (num == 18) output = output.replace(/.{18}(?=\ )/g, '');
+  if (num == 19) output = output.replace(/.{19}(?=\ )/g, '');
+  if (num == 20) output = output.replace(/.{20}(?=\ )/g, '');
+  if (num == 20) output = output.replace(/.{21}(?=\ )/g, '');
+  if (num == 20) output = output.replace(/.{22}(?=\ )/g, '');
   spitter.innerText = output
   displayColoredName(newNick, colors);
   showError();
@@ -218,6 +228,13 @@ async function displayColoredName(nickName, colors) {
   coloredNickP.innerHTML = "";
   for (let i = 0; i < nickName.length; i++) {
     const coloredNickSpan = document.createElement("span");
+    if (document.getElementById('underline').checked == true) {
+      if (document.getElementById('strike').checked == true) {
+        coloredNickSpan.classList.add('minecraftustrike');
+      } else coloredNickSpan.classList.add('minecraftunderline');
+    } else if (document.getElementById('strike').checked == true) {
+      coloredNickSpan.classList.add('minecraftstrike');
+    }
     coloredNickSpan.style.color = colors[i];
     coloredNickSpan.textContent = nickName[i];
     coloredNickP.append(coloredNickSpan);

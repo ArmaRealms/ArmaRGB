@@ -104,3 +104,12 @@ select.dark {
 .minecraftibold {
   font-family: MinecraftBoldItalic;
 }
+.minecraftunderline {
+  text-decoration: underline;
+}
+.minecraftustrike {
+  text-decoration: underline line-through;
+}
+.minecraftstrike {
+  text-decoration: line-through;
+}
