@@ -9,6 +9,7 @@ var newNick = nickName.value;
 var rgbtype = 'Essentials (&#rrggbb)';
 
 document.getElementById('darkmode').checked = true
+darkMode()
 
 
 function darkMode() {
