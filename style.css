@@ -113,3 +113,8 @@ select.dark {
 .minecraftstrike {
   text-decoration: line-through;
 }
+footer{
+  position: absolute;
+  top: 500;
+  right: 200;
+}
