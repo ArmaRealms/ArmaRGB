@@ -8,7 +8,8 @@ const coloredNickP = document.createElement("p");
 var newNick = nickName.value;
 var rgbtype = 'Essentials (&#rrggbb)';
 
-document.getElementById('darkmode').checked = false
+document.getElementById('darkmode').checked = true
+
 
 function darkMode() {
   if (document.getElementById('darkmode').checked == true) {
