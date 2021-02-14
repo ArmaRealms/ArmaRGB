@@ -114,7 +114,7 @@ select.dark {
   text-decoration: line-through;
 }
 footer{
-  position: absolute;
-  top: 500;
-  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:2px;
 }
