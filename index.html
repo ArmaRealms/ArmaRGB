@@ -15,22 +15,20 @@
 
     <div id="input" class="col-md-2" style="padding-left: 0;">
       <label id="label1" for="color1">First Hex Color</label> 
-      <input style="border-radius: 10px;" class="form-control col-md-2" id="color1" name="color1" value="FB4F5A" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <input style="border-radius: 10px;" class="form-control col-md-2" id="color1" name="color1" value="4100FB" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
       <label id="label2" for="color2">Second Hex Color</label>
-      <input style="border-radius: 10px;" class="form-control col-md-1" id="color2" name="color2" value="FDAD4F" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <input style="border-radius: 10px;" class="form-control col-md-1" id="color2" name="color2" value="00EEFD" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
       <label id="label3" for="steps">Message</label>
       <input style="border-radius: 10px;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="birdflop.com" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
       <div id="options">
         <div id="typeslist">
           <label style="margin-bottom: 0px; margin-top: 15px;">Type</label>
           <select style="width:100%; border-radius: 10px; padding-right: 6px; padding-left: 6px; padding-top: 6px; padding-bottom: 6px;" type="select" id="types" onchange="rgbtype = this.options[this.selectedIndex].innerText; updateSpitter(event);">
-            <option value='0'>Essentials (&#rrggbb)</option>
-            <option value='1'>LuckPerms ({#rrggbb})</option>
-            <option value='2'>Other (&x&r&r&g&g&b&b)</option>
-            <option value='3'>/nick (&#rrggbb)</option>
-            <option value='4'>/nick (&x&r&r&g&g&b&b)</option>
-            <option value='5'>/ranknick (&x&r&r&g&g&b&b)</option>
-            <option value='6'>Console (§x§r§r§g§g§b§b)</option>
+            <option value='0'>Default (&#rrggbb)</option>
+            <option value='1'>Legacy (&x&r&r&g&g&b&b)</option>
+            <option value='2'>/nick (&#rrggbb)</option>
+            <option value='3'>/nick (&x&r&r&g&g&b&b)</option>
+            <option value='4'>Console (§x§r§r§g§g§b§b)</option>
           </select>
         </div>
         <div id="bald">
