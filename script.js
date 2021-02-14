@@ -8,19 +8,6 @@ const coloredNickP = document.createElement("p");
 var newNick = nickName.value;
 var rgbtype = 'Essentials (&#rrggbb)';
 
-function copyTextToClipboard(text) {
-  var textArea = document.createElement("textarea");
-  textArea.value = text;
-
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-
-  document.execCommand('copy');
-  alert('Copied output!')
-  document.body.removeChild(textArea);
-}
-
 document.getElementById('darkmode').checked = false
 
 function darkMode() {
