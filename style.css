@@ -25,7 +25,7 @@
   -ms-overflow-style: none; scrollbar-width: none;
 }
 body.dark {
-  background-color:black;
+  background-color:#33404D;
   color:white;
 }
 select.dark {
