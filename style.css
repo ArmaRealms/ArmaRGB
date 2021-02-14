@@ -2,8 +2,8 @@
   width: 100%;
 }
 .darktextboxes {
-  background-color:#111;
-  border-color:#222;
+  background-color:#1F2933;
+  border-color:#2C3844;
   color:white;
 }
 .darkgray {
@@ -29,8 +29,8 @@ body.dark {
   color:white;
 }
 select.dark {
-  background-color:#111;
-  border-color:#222;
+  background-color:#1F2933;
+  border-color:#2C3844;
   color:white;
 }
 #colors {
