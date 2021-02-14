@@ -114,6 +114,8 @@ select.dark {
   text-decoration: line-through;
 }
 footer{
+  display: table;
+  text-align: center;
   margin-left:auto;
   margin-right:auto;
   margin-top:2px;
