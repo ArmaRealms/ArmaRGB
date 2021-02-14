@@ -21,8 +21,7 @@ function copyTextToClipboard(text) {
   document.body.removeChild(textArea);
 }
 
-document.getElementById('darkmode').checked = true
-darkMode()
+document.getElementById('darkmode').checked = false
 
 function darkMode() {
   if (document.getElementById('darkmode').checked == true) {
