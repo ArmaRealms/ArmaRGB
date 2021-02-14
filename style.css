@@ -116,5 +116,5 @@ select.dark {
 footer{
   position: absolute;
   top: 500;
-  right: 200;
+  width: 100%;
 }
