@@ -15,11 +15,15 @@
 
     <div id="input" class="col-md-2" style="padding-left: 0;">
       <label id="label1" for="color1">First Hex Color</label> 
-      <input style="border-radius: 10px;" class="form-control col-md-2" id="color1" name="color1" value="084CFB" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <input style="border-radius: 10px; position: inherit;" class="form-control col-md-4" id="color1" name="color1" value="084CFB" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
       <label id="label2" for="color2">Second Hex Color</label>
-      <input style="border-radius: 10px;" class="form-control col-md-1" id="color2" name="color2" value="ADF3FD" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
-      <label id="label3" for="steps">Message</label>
-      <input style="border-radius: 10px;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="birdflop.com" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
+      <input style="border-radius: 10px; position: inherit;" class="form-control col-md-3" id="color2" name="color2" value="ADF3FD" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <label id="label3" for="color3" style="display: none;">Third Hex Color</label>
+      <input style="border-radius: 10px; position: inherit; display: none;" class="form-control col-md-2" id="color3" name="color3" value="FFFFFF" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <label id="label4" for="color4" style="display: none;">Fourth Hex Color</label>
+      <input style="border-radius: 10px; position: inherit; display: none;" class="form-control col-md-1" id="color4" name="color4" value="FFFFFF" data-jscolor="{preset:'small dark', position:'right'}" oninput="updateSpitter(event)" onchange="updateSpitter(event)">
+      <label id="label5" for="steps">Message</label>
+      <input style="border-radius: 10px; position: inherit;" class="form-control col-md-2" id="nickname" name="nickname" type="text" placeholder="Message" value="birdflop.com" oninput="updateSpitter(event);" onchange="updateSpitter(event)">
       <div id="options">
         <div id="typeslist">
           <label style="margin-bottom: 0px; margin-top: 15px;">Type</label>
@@ -27,6 +31,14 @@
             <option value='0'>Default (&#rrggbb)</option>
             <option value='1'>Legacy (&x&r&r&g&g&b&b)</option>
             <option value='2'>Console (§x§r§r§g§g§b§b)</option>
+          </select>
+        </div>
+        <div id="coloramountlist">
+          <label style="margin-bottom: 0px; margin-top: 15px;">Number of colors</label>
+          <select style="width:100%; border-radius: 10px; padding-right: 6px; padding-left: 6px; padding-top: 6px; padding-bottom: 6px;" type="select" id="numOfColors" onchange="numberOfColors = this.options[this.selectedIndex].innerText; updateSpitter(event); hideColors();">
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
           </select>
         </div>
         <div id="bald">
