@@ -191,6 +191,8 @@ function updateSpitter(event) {
   if (rgbtype.includes('x')) {
     if (rgbtype.includes('§')) {
       output = othercolorsout.join('').replace(/&/g, '§');
+    } else if (rgbtype.includes('u')) {
+      output = othercolorsout.join('').replace(/&/g, '\u00A7');
     } else {
       output = othercolorsout.join('');
     }
