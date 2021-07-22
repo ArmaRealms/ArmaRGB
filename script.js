@@ -189,10 +189,10 @@ function updateSpitter(event) {
   }
   let output = ''
   if (rgbtype.includes('x')) {
-    if (rgbtype.includes('§')) {
-      output = othercolorsout.join('').replace(/&/g, '§');
-    } else if (rgbtype.includes('u')) {
+    if (rgbtype.includes('u')) {
       output = othercolorsout.join('').replace(/&/g, '\u00A7');
+    } else if (rgbtype.includes('§')) {
+      output = othercolorsout.join('').replace(/&/g, '§');
     } else {
       output = othercolorsout.join('');
     }
