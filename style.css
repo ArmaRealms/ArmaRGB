@@ -89,8 +89,9 @@ select.dark {
   font-weight: 400;
   src: url(./assets/fonts/Quicksand/regular.ttf) format('truetype');
 }
-#coloredNick p {
+#coloredNick {
   font-size: 4rem;
+  word-wrap: break-word;
 }
 .minecraft {
   font-family: MinecraftRegular;
@@ -121,6 +122,7 @@ footer{
   margin-top:120px;
 }
 #title {
+    position:relative;
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
     -webkit-background-clip: text;
     background-clip: text;
