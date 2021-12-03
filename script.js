@@ -104,7 +104,8 @@ function getRandomHexColor() {
      return Math.floor(Math.random()*16777215).toString(16).toUpperCase();
 }
 
-/* Copies contents to clipboard */
+/* 
+Copies contents to clipboard
 function copyTextToClipboard(text) {
   let textArea = document.createElement('textarea');
   textArea.value = text;
@@ -117,6 +118,7 @@ function copyTextToClipboard(text) {
   alert('Copied output!');
   document.body.removeChild(textArea);
 }
+*/
 
 function showError(show) {
   if (show) {
