@@ -52,21 +52,21 @@
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <!-- <div class="row">
+              <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Formato do Texto</label>
                   <select id="output-format"
                           class="form-control"
                           onchange="updateOutputText(event);">
                     <option value='0'>Padrão (&#rrggbb)</option>
-                    <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
+                    <!-- <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
                     <option value='6'>Console (§x§r§r§g§g§b§b)</option>
                     <option value='8'>MOTD (\u00A7x)</option>
                     <option value='1'>Chat (<#rrggbb>)</option>
-                    <option value='7'>BBCode [COLOR=#rrggbb]</option>
+                    <option value='7'>BBCode [COLOR=#rrggbb]</option> -->
                   </select>
                 </div>
-              </div> -->
+              </div>
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="color-preset">Predefinição de cores</label>
@@ -89,19 +89,19 @@
               <div class="row">
                 <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
-                  <label for="bold">Bold</label>
+                  <label for="bold">Negrito</label>
                 </div>
                 <div id="ditalics">
                   <input type="checkbox" id="italics" onclick="updateOutputText(event);"/>
-                  <label for="italics">Italic</label>
+                  <label for="italics">Itálico</label>
                 </div>
                 <div id="dunderline">
                   <input type="checkbox" id="underline" onclick="updateOutputText(event);"/>
-                  <label for="underline">Underline</label>
+                  <label for="underline">Sublinhado</label>
                 </div>
                 <div id="dstrike">
                   <input type="checkbox" id="strike" onclick="updateOutputText(event);"/>
-                  <label for="strike">Strikethrough</label>
+                  <label for="strike">Tachado</label>
                 </div>
                 <div id="appearance">
                   <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
