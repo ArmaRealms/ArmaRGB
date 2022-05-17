@@ -21,8 +21,8 @@
     </div>
     
     <div id="content">
-      <h1 id="title">Criador de Texto RGB do Armageddon Server!</h1>
-      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">Recomendado o uso do navegador Google Chrome.</p>
+      <h1 id="title" style="text-align: center">Criador de Texto RGB do Armageddon Server!</h1>
+      <p id="graylabel1" class="gray" style="padding-bottom: 10px; text-align: center">Recomendamos o uso do navegador Google Chrome.</p>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-2" style="padding-left: 0;">
@@ -58,7 +58,7 @@
                   <select id="output-format"
                           class="form-control"
                           onchange="updateOutputText(event);">
-                    <option value='0'>Default (&#rrggbb)</option>
+                    <option value='0'>Padrão (&#rrggbb)</option>
                     <!-- <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
                     <option value='6'>Console (§x§r§r§g§g§b§b)</option>
                     <option value='8'>MOTD (\u00A7x)</option>
@@ -87,7 +87,7 @@
                        oninput="updateOutputText(event); toggleColors(this.value);"/>
               </div>
               <div class="row">
-                <div id="dbold">
+                <!-- <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
                   <label for="bold">Bold</label>
                 </div>
@@ -102,7 +102,7 @@
                 <div id="dstrike">
                   <input type="checkbox" id="strike" onclick="updateOutputText(event);"/>
                   <label for="strike">Strikethrough</label>
-                </div>
+                </div> -->
                 <div id="appearance">
                   <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
                   <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Modo Escuro</label>

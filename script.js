@@ -275,7 +275,7 @@ function updateOutputText(event) {
 
   let newNick = nickName.value
   if (!newNick) {
-    newNick = 'Type something!'
+    newNick = 'Digite algo!'
   }
 
   const bold = document.getElementById('bold').checked;
