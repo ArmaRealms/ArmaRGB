@@ -2,18 +2,18 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="assets/images/new_birdflop_logo_large.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript"  src="/assets/js/js.cookie.js"></script>
-    <title>RGB Gradient Creator</title>
+    <title>Criador de Texto RGB</title>
   </head>
 
   <body id="bg" class="container" style="font-family: Quicksand;">
   
     <div id="hexColorTemplate" style="display:none;">
       <div class="row">
-        <label for="color-$NUM">Hex Color #$NUM</label>
+        <label for="color-$NUM">Cor HEX #$NUM</label>
         <input class="form-control col-md-1 hexColor" id="color-$NUM" style="border-radius: 10px;" value="$VAL"
                data-jscolor="{preset:'small dark', position:'right'}" oninput="javascript: updateOutputText(event)"
                onchange="javascript: updateOutputText(event); Cookies.set(`#${$NUM}`, document.getElementById('color-$NUM').value, { expires: 7, path: '' })"/>
@@ -21,8 +21,8 @@
     </div>
     
     <div id="content">
-      <h1 id="title">RGBirdflop</h1>
-      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">Use Google Chrome for the best experience.</p>
+      <h1 id="title">RGB Armageddon</h1>
+      <p id="graylabel1" class="gray" style="padding-bottom: 10px;">Use o Google Chrome para uma experiência melhor.</p>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-2" style="padding-left: 0;">
@@ -34,11 +34,11 @@
             <div class="container-fluid">
               <div class="row">
                 <div id="output">
-                  <label id="label4" for="outputText">Output</label>
-                  <label id="graylabel2" class="gray" for="outputText" style="font-weight: normal;">Copy-paste this for RGB text!</label>
+                  <label id="label4" for="outputText">Texto RGB</label>
+                  <label id="graylabel2" class="gray" for="outputText" style="font-weight: normal;"> Copie e cole este texto RGB no chat!</label>
                   <pre id="outputText" style="border-radius: 10px; white-space: pre-wrap; height: 70px; margin-right: 15px; font-family: MinecraftRegular; margin-bottom: 5px;"
                        onclick="copyTextToClipboard(this.textContent);"></pre>
-                  <p id="error">This is more than 256 characters and may not fit in the chat box.</p>
+                  <p id="error">O texto possui mais de 256 caracteres e pode não caber no chat do jogo.</p>
                 </div>
               </div>
               <div class="row">
@@ -46,13 +46,13 @@
               </div>
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
-                  <label for="nickname">Message</label>
-                  <input class="form-control" id="nickname" type="text" maxlength="100" placeholder="Your Text"
-                         value="birdflop.com" oninput="javascript: updateOutputText(event);"
+                  <label for="nickname">Mensagem</label>
+                  <input class="form-control" id="nickname" type="text" maxlength="100" placeholder="Seu texto"
+                         value="armamc.com" oninput="javascript: updateOutputText(event);"
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Output Format</label>
                   <select id="output-format"
@@ -66,20 +66,20 @@
                     <option value='7'>BBCode [COLOR=#rrggbb]</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
-                  <label for="color-preset">Color Preset</label>
+                  <label for="color-preset">Predefinição de cores</label>
                   <select id="color-preset"
                           class="form-control"
                           onchange="preset(this.value); updateOutputText(event); ">
-                    <option value='0'>None</option>
-                    <option value='1'>Rainbow</option>
+                    <option value='0'>Nenhum</option>
+                    <option value='1'>Arco-íris</option>
                   </select>
                 </div>
               </div>
               <div class="row">
-                <label for="numOfColors">Number of Colors</label>
+                <label for="numOfColors">Número de Cores</label>
                 <input class="form-control"
                        style="width: 75px;"
                        value="2" id="numOfColors" type="number" min="2" max="10"
@@ -87,7 +87,7 @@
                        oninput="updateOutputText(event); toggleColors(this.value);"/>
               </div>
               <div class="row">
-                <div id="dbold">
+                <!-- <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
                   <label for="bold">Bold</label>
                 </div>
@@ -102,10 +102,10 @@
                 <div id="dstrike">
                   <input type="checkbox" id="strike" onclick="updateOutputText(event);"/>
                   <label for="strike">Strikethrough</label>
-                </div>
+                </div> -->
                 <div id="appearance">
                   <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
-                  <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Dark Mode</label>
+                  <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Modo Escuro</label>
                 </div>
               </div>
             </div>
@@ -118,6 +118,6 @@
     </body>
 
   <footer>
-    <p>A special thanks to <a href="https://github.com/Oli-idk">Oli</a> and <a href="https://github.com/saboooor">Saboor</a> for their work on this RGB gradient generator. Happy to have y'all helping me out.</p>
+    <p>Armageddon Server</p>
   </footer>
 </html>
