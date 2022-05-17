@@ -52,21 +52,21 @@
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Formato do Texto</label>
                   <select id="output-format"
                           class="form-control"
                           onchange="updateOutputText(event);">
                     <option value='0'>Padrão (&#rrggbb)</option>
-                    <!-- <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
+                    <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
                     <option value='6'>Console (§x§r§r§g§g§b§b)</option>
                     <option value='8'>MOTD (\u00A7x)</option>
                     <option value='1'>Chat (<#rrggbb>)</option>
-                    <option value='7'>BBCode [COLOR=#rrggbb]</option> -->
+                    <option value='7'>BBCode [COLOR=#rrggbb]</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="color-preset">Predefinição de cores</label>
@@ -78,14 +78,14 @@
                   </select>
                 </div>
               </div>
-              <!-- <div class="row">
+              <div class="row">
                 <label for="numOfColors">Número de Cores</label>
                 <input class="form-control"
                        style="width: 75px;"
                        value="2" id="numOfColors" type="number" min="2" max="10"
                        onchange="updateOutputText(event); toggleColors(this.value);"
                        oninput="updateOutputText(event); toggleColors(this.value);"/>
-              </div> -->
+              </div>
               <div class="row">
                 <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
@@ -105,7 +105,7 @@
                 </div>
                 <div id="appearance">
                   <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
-                  <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;"> Modo Escuro</label>
+                  <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;">Modo Escuro</label>
                 </div>
               </div>
             </div>
