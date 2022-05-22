@@ -52,7 +52,7 @@
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <div class="row">
+              <div class="row" hidden>
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Formato do Texto</label>
                   <select id="output-format"
@@ -91,15 +91,15 @@
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
                   <label for="bold">Negrito</label>
                 </div>
-                <div id="ditalics">
+                <div id="ditalics" hidden>
                   <input type="checkbox" id="italics" onclick="updateOutputText(event);"/>
                   <label for="italics">Itálico</label>
                 </div>
-                <div id="dunderline">
+                <div id="dunderline" hidden>
                   <input type="checkbox" id="underline" onclick="updateOutputText(event);"/>
                   <label for="underline">Sublinhado</label>
                 </div>
-                <div id="dstrike">
+                <div id="dstrike" hidden>
                   <input type="checkbox" id="strike" onclick="updateOutputText(event);"/>
                   <label for="strike">Tachado</label>
                 </div>
@@ -115,11 +115,5 @@
     </div>
     <script src="jscolor.js"></script>
     <script src="script.js"></script>
-    <script>
-    // These options apply to all color pickers on the page
-    jscolor.presets.default = {
-    	position:'top', width:600, height:500
-    };
-    </script>
     </body>
 </html>
