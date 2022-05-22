@@ -1642,11 +1642,11 @@ var jsc = {
 
 		// Color Picker options
 		//
-		this.width = 181; // width of the color spectrum (in px)
-		this.height = 101; // height of the color spectrum (in px)
+		this.width = 282; // width of the color spectrum (in px)
+		this.height = 202; // height of the color spectrum (in px)
 		this.mode = 'HSV'; // 'HSV' | 'HVS' | 'HS' | 'HV' - layout of the color picker controls
 		this.alphaChannel = 'auto'; // 'auto' | true | false - if alpha channel is enabled, the alpha slider will be visible. If 'auto', it will be determined according to color format
-		this.position = 'bottom'; // 'left' | 'right' | 'top' | 'bottom' - position relative to the target element
+		this.position = 'left'; // 'left' | 'right' | 'top' | 'bottom' - position relative to the target element
 		this.smartPosition = true; // automatically change picker position when there is not enough space for it
 		this.showOnClick = true; // whether to show the picker when user clicks its target element
 		this.hideOnLeave = true; // whether to automatically hide the picker when user leaves its target element (e.g. upon clicking the document)
@@ -1657,7 +1657,7 @@ var jsc = {
 		this.paletteSpacing = 4; // distance (px) between color samples in the palette
 		this.hideOnPaletteClick = false; // when set to true, clicking the palette will also hide the color picker
 		this.sliderSize = 16; // px
-		this.crossSize = 8; // px
+		this.crossSize = 4; // px
 		this.closeButton = false; // whether to display the Close button
 		this.closeText = 'Close';
 		this.buttonColor = 'rgba(0,0,0,1)'; // CSS color
