@@ -52,7 +52,7 @@
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <div class="row" hidden>
+              <div class="row" hidden style="margin: 5px">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Formato do Texto</label>
                   <select id="output-format"
@@ -67,7 +67,7 @@
                   </select>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" style="margin: 5px">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="color-preset">Predefinição de cores</label>
                   <select id="color-preset"
@@ -78,7 +78,7 @@
                   </select>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" style="margin: 5px">
                 <label for="numOfColors">Número de Cores</label>
                 <input class="form-control"
                        style="width: 75px;"
@@ -86,7 +86,7 @@
                        onchange="updateOutputText(event); toggleColors(this.value);"
                        oninput="updateOutputText(event); toggleColors(this.value);"/>
               </div>
-              <div class="row">
+              <div class="row" style="margin: 5px">
                 <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
                   <label for="bold">Negrito</label>
