@@ -1642,8 +1642,8 @@ var jsc = {
 
 		// Color Picker options
 		//
-		this.width = 600; // width of the color spectrum (in px)
-		this.height = 500; // height of the color spectrum (in px)
+		this.width = 181; // width of the color spectrum (in px)
+		this.height = 101; // height of the color spectrum (in px)
 		this.mode = 'HSV'; // 'HSV' | 'HVS' | 'HS' | 'HV' - layout of the color picker controls
 		this.alphaChannel = 'auto'; // 'auto' | true | false - if alpha channel is enabled, the alpha slider will be visible. If 'auto', it will be determined according to color format
 		this.position = 'bottom'; // 'left' | 'right' | 'top' | 'bottom' - position relative to the target element
