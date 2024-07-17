@@ -12,10 +12,10 @@
   <body id="bg" class="container" style="font-family: Quicksand;">
   
     <div id="hexColorTemplate" style="display:none;">
-      <div class="row">
+      <div class="row padding-top">
         <label for="color-$NUM">Cor HEX #$NUM</label>
         <input class="form-control col-md-1 hexColor" id="color-$NUM" style="border-radius: 10px;" value="$VAL"
-               data-jscolor="{preset:'small dark', position:'right'}" oninput="javascript: updateOutputText(event)"
+               data-jscolor="{preset:'large dark thin', position:'bottom'}" oninput="javascript: updateOutputText(event)"
                onchange="javascript: updateOutputText(event); Cookies.set(`#${$NUM}`, document.getElementById('color-$NUM').value, { expires: 7, path: '' })"/>
       </div>
     </div>
@@ -30,7 +30,7 @@
           </div>
           <div class="col-md-10" style="padding-right: 0;">
             <div class="container-fluid">
-              <div class="row">
+              <div class="row padding-top">
                 <div id="output">
                   <label id="label4" for="outputText">Texto RGB</label>
                   <label id="graylabel2" class="gray" for="outputText" style="font-weight: normal;">Copie e cole este texto RGB no chat!</label>
@@ -44,13 +44,13 @@
               </div>
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
-                  <label for="nickname">Mensagem</label>
+                  <label for="nickname">Digite seu texto abaixo!</label>
                   <input class="form-control" id="nickname" type="text" maxlength="100" placeholder="Seu texto"
                          value="armamc.com" oninput="javascript: updateOutputText(event);"
                          onchange="javascript: updateOutputText(event)">
                 </div>
               </div>
-              <div class="row" hidden style="margin-top: 10px;">
+              <div class="row" hidden style="margin-top: 10px; padding-top: 100px;">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="output-format">Formato do Texto</label>
                   <select id="output-format"
@@ -66,17 +66,18 @@
                 </div>
               </div>
               <div class="row" style="margin-top: 10px;">
-                <div class="col-md-3" style="padding-left: 0;">
+                <div class="col-md-3 padding-top" style="padding-left: 0px;">
                   <label for="color-preset">Predefinição de cores</label>
                   <select id="color-preset"
                           class="form-control"
                           onchange="preset(this.value); updateOutputText(event); ">
                     <option value='0'>Nenhum</option>
                     <option value='1'>Arco-íris</option>
+                    <option value='2'>VIP Férias</option>
                   </select>
                 </div>
               </div>
-              <div class="row" style="margin-top: 10px;">
+              <div class="row padding-top" style="margin-top: 10px;">
                 <label for="numOfColors">Número de Cores</label>
                 <input class="form-control"
                        style="width: 75px;"
@@ -84,7 +85,8 @@
                        onchange="updateOutputText(event); toggleColors(this.value);"
                        oninput="updateOutputText(event); toggleColors(this.value);"/>
               </div>
-              <div class="row" style="margin-top: 10px;">
+              <div class="row padding-top" style="margin-top: 10px;">
+                <label for="color-preset">Formatos - Não funciona com <code>/nick</code></label>
                 <div id="dbold">
                   <input type="checkbox" id="bold" onclick="updateOutputText(event);"/>
                   <label for="bold">Negrito</label>
@@ -101,10 +103,10 @@
                   <input type="checkbox" id="strike" onclick="updateOutputText(event);"/>
                   <label for="strike">Tachado</label>
                 </div>
-                <div id="appearance">
+                <!-- <div id="appearance">
                   <input type="checkbox" id="darkmode" onclick="darkMode();"></input>
                   <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;">Modo Escuro</label>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

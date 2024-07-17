@@ -5,6 +5,9 @@ const savedColors = ['084CFB', 'ADF3FD', getRandomHexColor(), getRandomHexColor(
 const presets = {
   1: {
     colors: ["FF0000", "FF7F00", "FFFF00", "00FF00", "0000FF", "4B0082", "9400D3"],
+  },
+  2: {
+    colors: ["#AAFF99", "#73D1FF", "#FFB8B8", "#CD70FF"],
   }
 }
 const formats = {
@@ -64,39 +67,23 @@ const formats = {
   },
 };
 
-function darkMode() {
-  if (document.getElementById('darkmode').checked == true) {
-    document.body.classList.add('dark');
-    document.getElementById('output-format').classList.add("dark");
-    document.getElementById('color-preset').classList.add("dark");
-    document.getElementById('numOfColors').classList.add("dark");
-    document.getElementById('graylabel1').classList.replace("gray", "darkgray");
-    document.getElementById('graylabel2').classList.replace("gray", "darkgray");
-    document.getElementById('outputText').classList.replace("gray", "darkgray");
-    document.getElementById('outputText').classList.replace("gray", "darkgray");
-    document.getElementById('error').classList.replace("errortext", "darkerrortext");
-    document.getElementById('numOfColors').classList.add("darktextboxes");
-    document.getElementById('nickname').classList.add("darktextboxes");
-    document.getElementById('outputText').classList.add("darktextboxes");
-    Array.from(document.getElementsByClassName("hexColor")).forEach(e => {
-      document.getElementById(e.id).classList.add("darktextboxes");
-    })
-  } else {
-    document.body.classList.remove('dark');
-    document.getElementById('output-format').classList.remove("dark");
-    document.getElementById('color-preset').classList.remove("dark");
-    document.getElementById('numOfColors').classList.remove("dark");
-    document.getElementById('graylabel1').classList.replace("darkgray", "gray");
-    document.getElementById('graylabel2').classList.replace("darkgray", "gray");
-    document.getElementById('outputText').classList.replace("darkgray", "gray");
-    document.getElementById('error').classList.replace("darkerrortext", "errortext");
-    document.getElementById('numOfColors').classList.remove("darktextboxes");
-    document.getElementById('nickname').classList.remove("darktextboxes");
-    document.getElementById('outputText').classList.remove("darktextboxes");
-    Array.from(document.getElementsByClassName("hexColor")).forEach(e => {
-      document.getElementById(e.id).classList.remove("darktextboxes");
-    })
-  }
+// Set dark mode by default
+function setDarkMode() {
+  document.body.classList.add('dark');
+  document.getElementById('output-format').classList.add("dark");
+  document.getElementById('color-preset').classList.add("dark");
+  document.getElementById('numOfColors').classList.add("dark");
+  document.getElementById('graylabel1').classList.replace("gray", "darkgray");
+  document.getElementById('graylabel2').classList.replace("gray", "darkgray");
+  document.getElementById('outputText').classList.replace("gray", "darkgray");
+  document.getElementById('outputText').classList.replace("gray", "darkgray");
+  document.getElementById('error').classList.replace("errortext", "darkerrortext");
+  document.getElementById('numOfColors').classList.add("darktextboxes");
+  document.getElementById('nickname').classList.add("darktextboxes");
+  document.getElementById('outputText').classList.add("darktextboxes");
+  Array.from(document.getElementsByClassName("hexColor")).forEach(e => {
+    document.getElementById(e.id).classList.add("darktextboxes");
+  });
 }
 
 /* Get a random HEX color */
@@ -104,8 +91,7 @@ function getRandomHexColor() {
      return Math.floor(Math.random()*16777215).toString(16).toUpperCase();
 }
 
-/* 
-Copies contents to clipboard
+
 function copyTextToClipboard(text) {
   let textArea = document.createElement('textarea');
   textArea.value = text;
@@ -115,10 +101,9 @@ function copyTextToClipboard(text) {
   textArea.select();
 
   document.execCommand('copy');
-  alert('Copied output!');
+  alert('Texto copiado!');
   document.body.removeChild(textArea);
 }
-*/
 
 function showError(show) {
   if (show) {
@@ -368,7 +353,7 @@ function preset(n) {
     }
     jscolor.install(); // Refresh all jscolor elements
 }
+
 toggleColors(2);
 updateOutputText();
-document.getElementById('darkmode').checked = true
-darkMode()
+setDarkMode()
