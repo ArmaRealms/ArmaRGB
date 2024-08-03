@@ -117,15 +117,6 @@ select.dark {
 #inputs{
   position: relative;
 }
-@keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 100% 0;
-    }
-}
 body{
   margin: auto;
 }
