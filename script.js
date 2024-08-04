@@ -16,13 +16,13 @@ const presets = {
     colors: ["#FF14E8", "#AA00AA"],
   },
   5: {
-    colors: ["#58ff82", "#21f9e6", "#7e8fff"],
+    colors: ["#FF5555", "#AA0000"],
   },
   6: {
-    colors: ["#AAFF99", "#73D1FF", "#FFB8B8", "#CD70FF"],
+    colors: ["#58ff82", "#21f9e6", "#7e8fff"],
   },
   7: {
-    colors: ["#FF5555", "#AA0000"],
+    colors: ["#AAFF99", "#73D1FF", "#FFB8B8", "#CD70FF"],
   },
   8: {
     colors: ["#FF5A5A", "#FFA500", "#373232"],
