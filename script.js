@@ -30,6 +30,9 @@ const presets = {
   9: {
     colors: ["#00AAAA", "#FFFF33", "#FFAA00", "#FF0000"],
   },
+  10: {
+    colors: ["#FC79B9", "#E99055"],
+  }
 }
 const formats = {
   0: {
