@@ -3,51 +3,120 @@ const nickName = document.getElementById('nickname');
 const coloredNick = document.getElementById('coloredNick');
 const savedColors = ['084CFB', 'ADF3FD', getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor()];
 const presets = {
-  // Arco-Írias
-  1: {
-    colors: ["FF0000", "FF7F00", "FFFF00", "00FF00", "0000FF", "4B0082", "9400D3"],
-  },
+
+  // 1-20 CÓDIGOS DE CORES RELACIONADOS A VIPS.
+  
   // VIP Premium
-  2: {
+  1: {
     colors: ["#FFCA2C", "#FF7926"],
   },
   // VIP Master
-  3: {
+  2: {
     colors: ["#31FFF9", "#2F97DA"],
   },
   // VIP Ultimate
-  4: {
+  3: {
     colors: ["#FF14E8", "#AA00AA"],
   },
   // VIP Platinum
-  5: {
+  4: {
     colors: ["#FF5555", "#AA0000"],
   },
   // VIP Aniversário
-  6: {
+  5: {
     colors: ["#58ff82", "#21f9e6", "#7e8fff"],
   },
   // VIP Férias
-  7: {
+  6: {
     colors: ["#AAFF99", "#73D1FF", "#FFB8B8", "#CD70FF"],
   },
   // VIP Natal
-  8: {
+  7: {
     colors: ["#FF3A3A", "#FDFDFD", "#D4FFF8", "#26BEF6"],
   },
-  // Caixa Samurai
-  9: {
+
+  // 20-40 CÓDIGOS DE CORES RELACIONADOS A CAIXAS.
+
+  // Caixa Namorados - 2022
+  20: {
+    colors: ["#FF1B8B", "#FFA2C9", "#FF007F"],
+  },
+  // Caixa Junina - 2022
+  21: {
+    colors: ["#FF4B4B", "#E0F96B", "#64FFEC"],
+  },
+  // Caixa Halloween - 2022
+  22: {
+    colors: ["#FF7A00", "#FB3BFF"],
+  },
+  // Caixa Natal - 2022
+  23: {
+    colors: ["#FF2103", "#EBFFE3", "#05FF00"],
+  },
+
+
+  // Caixa Namorados - 2023
+  24: {
+    colors: ["#FF5D5D", "#D500FF"],
+  },
+  // Caixa Aniversário - 2023
+  25: {
+    colors: ["#FBB500", "#A50000"],
+  },
+  // Caixa Inverno - 2023
+  26: {
+    colors: ["#55FFFF", "#55B6FF"],
+  },
+  // Caixa Crianças - 2023
+  27: {
+    colors: ["#F0FD00", "#60FD00", "#0BE0FD", "#FD00D5"],
+  },
+  // Caixa Halloween - 2023
+  28: {
+    colors: ["#ff6600", "#a10000"],
+  },
+  // Caixa Natal - 2023
+  29: {
+    colors: ["#59fcfc", "#ffdddd", "#ff3737"],
+  },
+
+
+  // Caixa Carnaval - 2024
+  30: {
+    colors: ["#33CCFF", "#FE46FF", "#FF9600"],
+  },
+  // Caixa Páscoa - 2024
+  31: {
+    colors: ["#E1A1D9", "#3BF7F7", "#F4F4AF", "#F29CE9"],
+  },
+  // Caixa Samurai - 2024
+  32: {
     colors: ["#FF5A5A", "#FFA500", "#373232"],
   },
-  // Caixa Piratas
-  10: {
+
+
+  // Caixa Piratas - 2024
+  33: {
     colors: ["#00AAAA", "#FFFF33", "#FFAA00", "#FF0000"],
   },
-  // Caixa Halloween
-  11: {
+  // Caixa Halloween - 2024
+  34: {
     colors: ["#FC79B9", "#E99055"],
+  },
+    // Caixa Natal - 2024
+  35: {
+    colors: ["#FF3A3A", "#FDFDFD", "#D4FFF8", "#26BEF6"],
+  },
+  
+
+  // 40-60 CÓDIGOS DE CORES SEM TEMA.
+  
+  // Arco-Íris
+  40: {
+    colors: ["FF0000", "FF7F00", "FFFF00", "00FF00", "0000FF", "4B0082", "9400D3"]
   }
 }
+
 const formats = {
   0: {
     outputPrefix: '',
@@ -109,7 +178,9 @@ const formats = {
 function setDarkMode() {
   document.body.classList.add('dark');
   document.getElementById('output-format').classList.add("dark");
-  document.getElementById('color-preset').classList.add("dark");
+  document.getElementById('color-preset-vip').classList.add("dark");
+  document.getElementById('color-preset-crates').classList.add("dark");
+  document.getElementById('color-preset-others').classList.add("dark");
   document.getElementById('numOfColors').classList.add("dark");
   document.getElementById('graylabel1').classList.replace("gray", "darkgray");
   document.getElementById('graylabel2').classList.replace("gray", "darkgray");
