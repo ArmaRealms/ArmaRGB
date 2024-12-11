@@ -62,25 +62,55 @@
               </div>
               <div class="row" style="margin-top: 10px;">
                 <div class="col-md-3 padding-top" style="padding-left: 0px;">
-                  <label for="color-preset">Predefinição de cores</label>
-                  <select id="color-preset"
-                          class="form-control"
+                  <label for="color-preset">Cores de VIP</label>
+                  <select id="color-preset-vip"
+                          class="form-control color-select"
                           onchange="preset(this.value); updateOutputText(event); ">
                     <option value='0'>Nenhum</option>
-                    <option value='1'>Arco-íris</option>
                     <option value='2'>VIP Premium</option>
                     <option value='3'>VIP Master</option>
                     <option value='4'>VIP Ultimate</option>
                     <option value='5'>VIP Platinum</option>
-                    <option value='6'>VIP Aniversário</option>
-                    <option value='7'>VIP Férias</option>
-                    <option value='8'>VIP Natal</option>
-                    <option value='9'>Caixa Samurai - 2024</option>
-                    <option value='10'>Caixa dos Piratas - 2024</option>
-                    <option value='11'>Caixa de Halloween - 2024</option>
+                    <option value='6'>VIP Aniversário - 2024</option>
+                    <option value='7'>VIP Férias - 2024</option>
+                    <option value='8'>VIP Natal - 2024</option>
+                  </select>
+                </div>
+                <div class="col-md-3 padding-top" style="padding-left: 0px;">
+                  <label for="color-preset">Cores de Caixa</label>
+                  <select id="color-preset-crates"
+                          class="form-control color-select"
+                          onchange="preset(this.value); updateOutputText(event); ">
+                    <option value='0'>Nenhum</option>
+                    <option value='20'>Caixa Namorados - 2022</option>
+                    <option value='21'>Caixa Junina - 2022</option>
+                    <option value='22'>Caixa Halloween - 2022</option>
+                    <option value='23'>Caixa Natal - 2022</option>
+                    <option value='24'>Caixa Namorados - 2023</option>
+                    <option value='25'>Caixa Aniversário - 2023</option>
+                    <option value='26'>Caixa Inverno - 2023</option>
+                    <option value='27'>Caixa Crianças - 2023</option>
+                    <option value='28'>Caixa Halloween - 2023</option>
+                    <option value='29'>Caixa Natal - 2023</option>
+                    <option value='30'>Caixa Carnaval - 2024</option>
+                    <option value='31'>Caixa Páscoa - 2024</option>
+                    <option value='32'>Caixa Samurai - 2024</option>
+                    <option value='33'>Caixa Piratas - 2024</option>
+                    <option value='34'>Caixa Halloween - 2024</option>
+                    <option value='35'>Caixa Natal - 2024</option>
+                  </select>
+                </div>
+                <div class="col-md-3 padding-top" style="padding-left: 0px;">
+                  <label for="color-preset">Outras Cores</label>
+                  <select id="color-preset-others"
+                          class="form-control color-select"
+                          onchange="preset(this.value); updateOutputText(event); ">
+                    <option value='0'>Nenhum</option>
+                    <option value='40'>Arco-íris</option>
                   </select>
                 </div>
               </div>
+              
               <div class="row padding-top" style="margin-top: 10px;">
                 <label for="numOfColors">Número de Cores</label>
                 <input class="form-control"
