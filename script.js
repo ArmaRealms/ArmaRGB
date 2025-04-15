@@ -46,6 +46,10 @@ const presets = {
   // Caixa Halloween
   11: {
     colors: ["#FC79B9", "#E99055"],
+  },
+  // Caixa Halloween
+  12: {
+    colors: ["#CD1025", "#EF473A"],
   }
 }
 const formats = {
